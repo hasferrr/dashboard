@@ -64,6 +64,15 @@ body {
     font-weight: 900;
 }
 
+.nav input {
+    background-color: rgb(233, 235, 243);
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    width: 20rem;
+}
+
 .nav-right .icon {
     border-radius: 50%;
     background-image: url(images/icon.png);
