@@ -1,5 +1,5 @@
 :root {
-    --light: rgb(130 132 144);
+    --light: rgb(210, 210, 210);
     --very-light: rgb(235, 235, 235);
 }
 
@@ -20,7 +20,7 @@ a {
     grid-template-areas:
         "left top top"
         "left main side";
-    grid-template-columns: 0fr 5fr 2fr;
+    grid-template-columns: 0fr 5fr 0fr;
     grid-template-rows: 5rem minmax(calc(100vh - 5rem), auto);
 }
 
@@ -29,7 +29,7 @@ a {
 .left {
     grid-area: left;
     background-color: #1E1E1F;
-    color: whitesmoke;
+    color: white;
     display: flex;
     flex-direction: column;
     padding: 0 2rem;
@@ -37,6 +37,10 @@ a {
 
 .sidebar.btn {
     padding: 0 0 2rem;
+}
+
+.left a:hover {
+    color: var(--light);
 }
 
 
@@ -71,7 +75,7 @@ a {
     width: 20rem;
 }
 
-.icon {
+.profile {
     border-radius: 50%;
     background-image: url(images/icon.jpg);
     width: 3rem ;
@@ -79,6 +83,15 @@ a {
     border: 1px solid var(--very-light);
     background-size: cover;
     background-position: center;
+}
+
+.icon {
+    width: 1.75rem ;
+    height: 1.75rem;
+}
+
+.nav a:hover {
+    color: darkgrey;
 }
 
 
@@ -100,6 +113,13 @@ a {
     background-color: white;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.075);
     padding: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: max-content;
+}
+
+.main .card {
+    grid-auto-rows: 0fr 1fr;
 }
 
 .card-title {
@@ -107,8 +127,19 @@ a {
 }
 
 .card-text {
-    color: var(--light);
+    color: grey;
     font-size: .9rem;
+}
+
+.card-button {
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+}
+
+.card-button > * {
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
 
