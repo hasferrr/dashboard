@@ -1,3 +1,8 @@
+:root {
+    --light: rgb(130 132 144);
+    --very-light: rgb(235, 235, 235);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -58,7 +63,7 @@ a {
 }
 
 .nav input {
-    background-color: rgb(233, 235, 243);
+    background-color: var(--very-light);
     border: none;
     outline: none;
     border-radius: 30px;
@@ -71,17 +76,9 @@ a {
     background-image: url(images/icon.png);
     width: 2.5rem ;
     height: 2.5rem;
-    border: 1px solid rgb(200, 200, 200);
+    border: 1px solid var(--very-light);
     background-size: contain;
     background-position: center;
-}
-
-.separator {
-    background-color: rgb(200, 200, 200);
-    height: 2rem;
-    width: 1px;
-    margin: 0;
-    padding: 0;
 }
 
 
@@ -94,7 +91,7 @@ a {
 .cards {
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
     grid-auto-rows: minmax(15rem, 1fr);
 }
 
@@ -105,10 +102,20 @@ a {
     padding: 1.5rem;
 }
 
+.card-title {
+    padding-bottom: 1rem;
+}
+
+.card-text {
+    color: var(--light);
+    font-size: .9rem;
+}
+
 
 /* Side grid */
 .side {
     grid-area: side;
+    margin: 0px 1.25rem 1.25rem 0;
 }
 
 
@@ -124,6 +131,21 @@ a {
 
 .tab {
     padding-left: 1rem;
+}
+
+.separator-v {
+    background-color: var(--very-light);
+    height: 2rem;
+    width: 1px;
+    margin: 0;
+    padding: 0;
+}
+
+.separator-h {
+    background-color: var(--very-light);
+    height: 1px;
+    width: 100%;
+    margin: 1.5rem 0 1.5rem;
 }
 
 /* .border * {
