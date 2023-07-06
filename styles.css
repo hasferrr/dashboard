@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "left top top"
+        "left main side";
+    grid-template-columns: 0fr 5fr 2fr;
+    grid-template-rows: 5rem minmax(calc(100vh - 5rem), auto);
+}
+
+
+/* Left side bar */
+.left {
+    grid-area: left;
+    background-color: #1E1E1F;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+}
+
+.title {
+    font-size: 1.5rem;
+    padding: 2rem 0 2rem;
+}
+
+.sidebar.btn {
+    padding: 0 0 2rem;
+}
+
+
+/* Top navigation bar */
+.top {
+    grid-area: top;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.nav {
+    padding: 0 2rem 0;
+}
+
+.nav-left {
+    font-weight: 900;
+}
+
+.nav-right {
+    display: flex;
+    justify-content: end;
+}
+
+.nav-right > * {
+    padding-right: 2rem;
+}
+
+
+/* Main grid */
+.main {
+    grid-area: main;
+}
+
+
+/* Side grid */
+.side {
+    grid-area: side;
+}
+
+
+/* Other style */
+.bg-whitesmoke {
+    background-color: whitesmoke;
+}
+
+/* .border * {
+    border: 1px solid green;
+} */
