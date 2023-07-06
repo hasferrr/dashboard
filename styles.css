@@ -54,19 +54,32 @@ body {
 
 .nav {
     padding: 0 2rem 0;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 1.5rem;
 }
 
-.nav-left {
+.greet {
     font-weight: 900;
 }
 
-.nav-right {
-    display: flex;
-    justify-content: end;
+.nav-right .icon {
+    border-radius: 50%;
+    background-image: url(images/icon.png);
+    width: 2.5rem ;
+    height: 2.5rem;
+    border: 1px solid rgb(200, 200, 200);
+    background-size: contain;
+    background-position: center;
 }
 
-.nav-right > * {
-    padding-right: 2rem;
+.separator {
+    background-color: rgb(200, 200, 200);
+    height: 2rem;
+    width: 1px;
+    margin: 0;
+    padding: 0;
 }
 
 
